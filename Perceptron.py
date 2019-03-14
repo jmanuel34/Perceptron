@@ -8,8 +8,6 @@ class Perceptron:
         self.b = np.random.rand(noutput) - 0.5
 
     def forward(self, x):  # propaga un vector x y devuelve la salida
-        # a implementar
-        #neta = np.product(x[0][0], self.w) + np.product(x[0][1], self.w) + self.b
         neta = np.matmul(x, self.w)+self.b
         return np.piecewise(neta, [neta < 0, neta >= 0], [0, 1])
 
@@ -49,4 +47,4 @@ data = np.array([[0.0, 0.0], [0.0, 1.0], [1.0, 0.0], [1.0, 1.0]])
 labels = np.array([[0.0], [1.0], [1.0], [1.0]])
 
 p.info(data, labels)
-p.train(data, labels, 1, 50, 10)
+p.train(data, labels, 0.01, 40, 10)
