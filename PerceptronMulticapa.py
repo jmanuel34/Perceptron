@@ -13,24 +13,29 @@ class Multilayer:
 
         self.lRMS = []  # contiene la lista de RMSs para pintarlos
         self.laccuracy = []  # contiene la lista de accuracy
-        self.s1
-        self.s2
+        self.s1=np.empty((2,1))
+        self.s2=np.empty((1,1))
 
     def sigm(self, neta):
         return 1.0 / (1.0 + np.exp(-neta))
 
     def forward(self, x):  # propaga un vector x y devuelve la salida
-        self.s1 = self.sigm(np.matmul(x, self.w1)+self.b)
-        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b)
+        self.s1 = self.sigm(np.matmul(x, self.w1)+self.b1)
+        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
         return self.s2
+
     # a implementar
 
     def update(self, x, d, alpha):  # realiza una iteración de entrenamiento
     # a implementar
         s = self.forward(x)  # propaga
-        self.w2 = np.dot(self.w2, (d - s),    )
+
         delta2= np.dot(d - self.s2, self.s2)*(1-self.s2)
-        self.w2= (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2))
+        self.w2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
+        delta1 = np.dot(delta2, self.w2.T)*self.s1*(1-self.s1)
+        self.w1= self.w1+ (np.dot(alpha,x.reshape(-1,1))*delta1)
+        self.b1 = self.b1 + np.dot(alpha, delta1)
+        self.b2=self.b2 + np.dot(alpha, delta2)
 
     def RMS(self, X, D):
         S = self.forward(X)
