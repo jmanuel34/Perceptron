@@ -33,7 +33,7 @@ class Multilayer:
         delta2= np.dot(d - self.s2, self.s2)*(1-self.s2)
         self.w2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
         delta1 = np.dot(delta2, self.w2.T)*self.s1*(1-self.s1)
-        self.w1= self.w1+ (np.dot(alpha,x.reshape(-1,1))*delta1)
+        self.w1 = self.w1+ (np.dot(alpha,x.reshape(-1,1))*delta1)
         self.b1 = self.b1 + np.dot(alpha, delta1)
         self.b2=self.b2 + np.dot(alpha, delta2)
 
