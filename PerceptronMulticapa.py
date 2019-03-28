@@ -5,7 +5,7 @@ class Multilayer:
         self.ninput = ninput
         self.nhidden = nhidden
         self.noutput = noutput
-
+        #np.random.seed(1)
         self.w1 = np.random.rand(ninput, nhidden) - 0.5
         self.b1 = np.random.rand(nhidden) - 0.5
         self.w2 = np.random.rand(nhidden, noutput) - 0.5
@@ -13,8 +13,9 @@ class Multilayer:
 
         self.lRMS = []  # contiene la lista de RMSs para pintarlos
         self.laccuracy = []  # contiene la lista de accuracy
-        self.s1=np.empty((2,1))
-        self.s2=np.empty((1,1))
+
+        self.s1=None
+        self.s2=None
 
     def sigm(self, neta):
         return 1.0 / (1.0 + np.exp(-neta))
@@ -30,12 +31,17 @@ class Multilayer:
     # a implementar
         s = self.forward(x)  # propaga
 
-        delta2= np.dot(d - self.s2, self.s2)*(1-self.s2)
-        self.w2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
-        delta1 = np.dot(delta2, self.w2.T)*self.s1*(1-self.s1)
-        self.w1 = self.w1+ (np.dot(alpha,x.reshape(-1,1))*delta1)
+        delta2 = np.dot(d - self.s2, self.s2)*(1-self.s2)
+
+ #       capa2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
+        delta1 = np.dot(delta2, self.w2.T) * self.s1 * (1 - self.s1)
+
+        self.w2 = self.w2 + alpha * self.s1.reshape(-1,1) * delta2
+        self.b2 = self.b2 + alpha * delta2
+
+        self.w1 = self.w1 + (np.dot(alpha,x.reshape(-1,1))*delta1)
         self.b1 = self.b1 + np.dot(alpha, delta1)
-        self.b2=self.b2 + np.dot(alpha, delta2)
+
 
     def RMS(self, X, D):
         S = self.forward(X)
