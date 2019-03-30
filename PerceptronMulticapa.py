@@ -89,5 +89,7 @@ labels = np.array([[0.0], [1.0], [1.0], [0.0]])
 p = Multilayer(2,2,1)
 
 p.info(data, labels)
-p.train(data, labels, 0.8, 5000, 1000)
+p.train(data, labels, 0.6, 2000, 300)
+
+
 
