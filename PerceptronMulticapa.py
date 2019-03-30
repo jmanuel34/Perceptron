@@ -21,26 +21,30 @@ class Multilayer:
         return 1.0 / (1.0 + np.exp(-neta))
 
     def forward(self, x):  # propaga un vector x y devuelve la salida
-        self.s1 = self.sigm(np.matmul(x, self.w1)+self.b1)
-        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
+#        self.s1 = self.sigm(np.matmul(x, self.w1)+self.b1)
+#        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
+        self.s1 = self.sigm(np.dot(x, self.w1) + self.b1)
+        self.s2 = self.sigm(np.dot(self.s1, self.w2) + self.b2)
+
         return self.s2
+
 
     # a implementar
 
     def update(self, x, d, alpha):  # realiza una iteración de entrenamiento
-    # a implementar
+        # a implementar
         s = self.forward(x)  # propaga
 
-        delta2 = np.dot(d - self.s2, self.s2)*(1-self.s2)
+        delta2 = (d - self.s2) * self.s2 * (1 - self.s2)
+        delta1 = np.matmul(delta2, self.w2.T) * self.s1 * (1 - self.s1)
 
- #       capa2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
-        delta1 = np.dot(delta2, self.w2.T) * self.s1 * (1 - self.s1)
+        #       capa2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
 
-        self.w2 = self.w2 + alpha * self.s1.reshape(-1,1) * delta2
+        self.w2 = self.w2 + alpha * self.s1.reshape(-1, 1) * delta2
         self.b2 = self.b2 + alpha * delta2
 
-        self.w1 = self.w1 + (np.dot(alpha,x.reshape(-1,1))*delta1)
-        self.b1 = self.b1 + np.dot(alpha, delta1)
+        self.w1 = self.w1 + alpha * x.reshape(-1, 1) * delta1
+        self.b1 = self.b1 + alpha * delta1
 
 
     def RMS(self, X, D):

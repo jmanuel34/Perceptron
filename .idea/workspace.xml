@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26cfd87f-d31c-47c2-aff4-dab124a840d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerceptronMulticapa.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerceptronMulticapa.py" afterDir="false" />
     </list>
     <ignored path=".idea" />
@@ -13,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Perceptron$Perceptron.coverage" NAME="Perceptron Coverage Results" MODIFIED="1553182511378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Perceptron$PerceptronMulticapa.coverage" NAME="PerceptronMulticapa Coverage Results" MODIFIED="1553787989296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Perceptron$PerceptronMulticapa.coverage" NAME="PerceptronMulticapa Coverage Results" MODIFIED="1553789870966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -29,12 +30,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PerceptronMulticapa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state relative-caret-position="3">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iris.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-12" />
           </provider>
         </entry>
       </file>
@@ -69,7 +77,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
+    <option name="x" value="128" />
+    <option name="y" value="26" />
     <option name="width" value="1680" />
     <option name="height" value="1011" />
   </component>
@@ -209,12 +218,12 @@
       <workItem from="1553188269984" duration="3375000" />
       <workItem from="1553251762576" duration="155000" />
       <workItem from="1553609268380" duration="869000" />
-      <workItem from="1553762534590" duration="9380000" />
+      <workItem from="1553762534590" duration="12665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42064000" />
+    <option name="totallyTimeSpent" value="45349000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -226,29 +235,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1680" height="1011" extended-state="0" />
+    <frame x="128" y="26" width="1680" height="1011" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13980465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13980465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6929182" visible="true" weight="0.4657236" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6923077" weight="0.58868337" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297062" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993895" weight="0.3297062" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4993895" weight="0.3297062" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.30708182" side_tool="true" visible="true" weight="0.4657236" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.497558" weight="0.124047875" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.7344322" weight="0.265506" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50305253" side_tool="true" visible="true" weight="0.19586506" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969475" visible="true" weight="0.19586506" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.73382175" weight="0.265506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.75967413" visible="true" weight="0.26800978" />
-      <window_info anchor="right" x="0" y="0" width="370" height="811" id="Documentation" order="4" sideWeight="0.24032587" side_tool="true" visible="true" weight="0.26800978" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.76048714" visible="true" weight="0.26800978" />
+      <window_info anchor="right" x="0" y="0" width="370" height="811" id="Documentation" order="4" sideWeight="0.23951286" side_tool="true" visible="true" weight="0.26800978" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -265,22 +275,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/PerceptronMulticapa.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PerceptronMulticapa.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="17" />
+          <line>42</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="self.s1" language="Python" />
+        <watch expression="np.dot(alpha*self.s1.reshape(-1,1), delta2)" language="Python" />
         <watch expression="x" language="Python" />
+        <watch expression="self.s2" language="Python" />
+        <watch expression="self.s1 " language="Python" />
         <watch expression="self.s1.reshape(-1,1)" language="Python" />
         <watch expression="np.dot(alpha*self.s1.reshape(-1,1), delta2)" language="Python" />
+        <watch expression="self.w2" language="Python" />
         <watch expression="self.w2" language="Python" />
       </configuration>
     </watches-manager>
@@ -288,7 +297,7 @@
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>x</expression-string>
+        <expression-string>np.dot(alpha*self.s1.reshape(-1,1), delta2)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -298,17 +307,22 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.dot(alpha*self.s1.reshape(-1,1), delta2)</expression-string>
+        <expression-string>self.s1</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.s2</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>x</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
         <expression-string>self.s1.reshape(-1,1)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.s1</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -324,16 +338,6 @@
       </expression>
       <expression>
         <expression-string>np.dot(self.s1.reshape(-1,1), self.delta2).reshape(-1, 1)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>s1.reshape(-1,1)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>np.dot(alpha*self.s1.reshape(-1,1), delta2).reshape(-1, 1))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -392,9 +396,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/iris.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PerceptronMulticapa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
+        <state relative-caret-position="3">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
