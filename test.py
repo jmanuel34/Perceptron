@@ -1,0 +1,5 @@
+p = ([2,2,2,1])
+print (p[0])
+print (p[1])
+print (p[2])
+print (p[3])

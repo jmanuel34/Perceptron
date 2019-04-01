@@ -28,9 +28,9 @@ class Multilayer:
     def forward(self, x):  # propaga un vector x y devuelve la salida
 #        self.s1 = self.sigm(np.matmul(x, self.w1)+self.b1)
 #        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
-        self.s1 = self.sigm(np.dot(x, self.w1) + self.b1)
-        self.s2 = self.sigm(np.dot(self.s1, self.w2) + self.b2)
-        self.s3 = self.sigm(np.dot(self.s2, self.w3) + self.b3)
+        self.s1 = self.sigm(np.matmul(x, self.w1) + self.b1)
+        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
+        self.s3 = self.sigm(np.matmul(self.s2, self.w3) + self.b3)
         return self.s3
 
 
@@ -42,13 +42,13 @@ class Multilayer:
 
         delta3 = (d - self.s2) * self.s2 * (1 - self.s2)
         delta2 = np.matmul(delta3, self.w2.T) * self.s1 * (1 - self.s1)
-        delta1 = np.matmul(delta2, self.w2.T) * self.s1 * (1 - self.s1)
+        delta1 = np.matmul(delta2, self.w1.T) * self.s1 * (1 - self.s1)
 
 
-        self.w3 = self.w3 + alpha * self.s1.reshape(-1, 1) * delta3
+        self.w3 = self.w3 + alpha * self.s2.reshape(-1, 1) * delta3
         self.b3 = self.b3 + alpha * delta3
 
-        self.w2 = self.w2 + alpha * x.reshape(-1, 1) * delta2
+        self.w2 = self.w2 + alpha * self.s1.reshape(-1, 1) * delta2
         self.b2 = self.b2 + alpha * delta2
 
         self.w1 = self.w1 + alpha * x.reshape(-1, 1) * delta1
@@ -94,10 +94,7 @@ class Multilayer:
 data = np.array([[0.0, 0.0], [0.0, 1.0], [1.0, 0.0], [1.0, 1.0]])
 labels = np.array([[0.0], [1.0], [1.0], [0.0]])
 
-
-
-
 p = Multilayer(2,2,2,1)
 
 p.info(data, labels)
-p.train(data, labels, 0.7, 500, 100)
+p.train(data, labels, 0.7, 30000, 3000)
