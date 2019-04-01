@@ -1,15 +1,20 @@
 import numpy as np
 import math
 class Multilayer:
-    def __init__(self, ninput, nhidden, noutput):
+    def __init__(self, ninput, nhidden1, nhidden2, noutput):
         self.ninput = ninput
-        self.nhidden = nhidden
+        self.nhidden1 = nhidden1
+        self.nhidden2 = nhidden2
         self.noutput = noutput
-        #np.random.seed(1)
-        self.w1 = np.random.rand(ninput, nhidden) - 0.5
-        self.b1 = np.random.rand(nhidden) - 0.5
-        self.w2 = np.random.rand(nhidden, noutput) - 0.5
-        self.b2 = np.random.rand(noutput) - 0.5
+
+        self.w1 = np.random.rand(ninput, nhidden1) - 0.5
+        self.b1 = np.random.rand(nhidden1) - 0.5
+
+        self.w2 = np.random.rand(nhidden1, nhidden2) - 0.5
+        self.b2 = np.random.rand(nhidden1) - 0.5
+
+        self.w3 = np.random.rand(nhidden2, noutput) - 0.5
+        self.b3 = np.random.rand(noutput) - 0.5
 
         self.lRMS = []  # contiene la lista de RMSs para pintarlos
         self.laccuracy = []  # contiene la lista de accuracy
@@ -25,8 +30,8 @@ class Multilayer:
 #        self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
         self.s1 = self.sigm(np.dot(x, self.w1) + self.b1)
         self.s2 = self.sigm(np.dot(self.s1, self.w2) + self.b2)
-
-        return self.s2
+        self.s3 = self.sigm(np.dot(self.s2, self.w3) + self.b3)
+        return self.s3
 
 
     # a implementar
@@ -35,12 +40,15 @@ class Multilayer:
         # a implementar
         s = self.forward(x)  # propaga
 
-        delta2 = (d - self.s2) * self.s2 * (1 - self.s2)
+        delta3 = (d - self.s2) * self.s2 * (1 - self.s2)
+        delta2 = np.matmul(delta3, self.w2.T) * self.s1 * (1 - self.s1)
         delta1 = np.matmul(delta2, self.w2.T) * self.s1 * (1 - self.s1)
 
-#       capa2 = (self.w2 + np.dot(alpha*self.s1.reshape(-1,1),delta2).reshape(-1, 1))
 
-        self.w2 = self.w2 + alpha * self.s1.reshape(-1, 1) * delta2
+        self.w3 = self.w3 + alpha * self.s1.reshape(-1, 1) * delta3
+        self.b3 = self.b3 + alpha * delta3
+
+        self.w2 = self.w2 + alpha * x.reshape(-1, 1) * delta2
         self.b2 = self.b2 + alpha * delta2
 
         self.w1 = self.w1 + alpha * x.reshape(-1, 1) * delta1
@@ -86,10 +94,10 @@ class Multilayer:
 data = np.array([[0.0, 0.0], [0.0, 1.0], [1.0, 0.0], [1.0, 1.0]])
 labels = np.array([[0.0], [1.0], [1.0], [0.0]])
 
-p = Multilayer(2,2,1)
+
+
+
+p = Multilayer(2,2,2,1)
 
 p.info(data, labels)
-p.train(data, labels, 0.6, 2000, 300)
-
-
-
+p.train(data, labels, 0.7, 500, 100)
