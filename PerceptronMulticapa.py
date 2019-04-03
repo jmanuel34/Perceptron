@@ -75,7 +75,7 @@ class Multilayer:
                 self.info(X, D)
 
 
-    def one_hot(d):
+def one_hot(d):
         num_classes = len(set(d))
         rows = d.shape[0]
         labels = np.zeros((rows, num_classes), dtype='float32')
