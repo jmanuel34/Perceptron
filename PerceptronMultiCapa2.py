@@ -25,25 +25,31 @@ class Multilayer:
         self.s[0] = self.sigm(np.matmul(x, self.w[0]) + self.b[0])
         for i in range(len(self.layers)-1):
             self.s[i+1] = self.sigm(np.matmul(self.s[i], self.w[i+1]) + self.b[i+1])
-            return self.s
+        return self.s
 
-"""        self.s1 = self.sigm(np.matmul(x, self.w1) + self.b1)
+    """
+        self.s1 = self.sigm(np.matmul(x, self.w1) + self.b1)
         self.s2 = self.sigm(np.matmul(self.s1, self.w2) + self.b2)
         self.s3 = self.sigm(np.matmul(self.s2, self.w3) + self.b3)
         return self.s3
-"""
+    """
 
 
-    # a implementar
+# a implementar
 
     def update(self, x, d, alpha):  # realiza una iteración de entrenamiento
         # a implementar
+        delta= []
         s = self.forward(x)  # propaga
-
+        delta[len(self.layers)-1] = (d - self.s[len(self.layers)-2]) * self.s[len(self.layers)-2] * (1 - s[len(self.layers)-2])
+        for i in range(len(self.layers)-1,0,-1):
+            delta[i]= (d-self.layers[i-1])*self.layers(i-1)*(1-self.layers(i-1))
+        """
         delta3 = (d - self.s2) * self.s2 * (1 - self.s2)
-        delta2 = np.matmul(delta3, self.w2.T) * self.s1 * (1 - self.s1)
+        delta2 = np.matmul(delta3, self.w2.T) * self.s2 * (1 - self.s2)
         delta1 = np.matmul(delta2, self.w1.T) * self.s1 * (1 - self.s1)
-
+        """
+        for i in range (len(self.layers)-1, 0, -1):
 
         self.w3 = self.w3 + alpha * self.s2.reshape(-1, 1) * delta3
         self.b3 = self.b3 + alpha * delta3

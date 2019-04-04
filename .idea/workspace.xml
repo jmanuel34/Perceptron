@@ -4,7 +4,6 @@
     <list default="true" id="26cfd87f-d31c-47c2-aff4-dab124a840d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PerceptronMultiCapa2.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerceptronMultiCapa2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerceptronMulticapa.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerceptronMulticapa.py" afterDir="false" />
     </list>
     <ignored path=".idea" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PerceptronMulticapaPlus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="-1602">
+              <caret selection-end-line="99" selection-end-column="39" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -69,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perceptronMultiMulti.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="409">
+              <caret line="26" selection-start-line="26" selection-end-line="31" selection-end-column="25" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PerceptronMultiCapa2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="419">
+              <caret line="56" column="42" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="42" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -147,7 +146,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="33" />
+    <option name="y" value="29" />
     <option name="width" value="1680" />
     <option name="height" value="1011" />
   </component>
@@ -248,9 +247,6 @@
       <module name="Perceptron" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -365,12 +361,12 @@
       <workItem from="1554054673856" duration="4525000" />
       <workItem from="1554113307829" duration="19059000" />
       <workItem from="1554210997014" duration="506000" />
-      <workItem from="1554316388978" duration="1243000" />
+      <workItem from="1554316388978" duration="4999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73100000" />
+    <option name="totallyTimeSpent" value="76856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,7 +378,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="33" width="1680" height="1011" extended-state="0" />
+    <frame x="0" y="29" width="1680" height="1011" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15079366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -390,21 +387,21 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8369963" visible="true" weight="0.28944504" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8369963" weight="0.28944504" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993895" weight="0.3297062" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4993895" weight="0.3297062" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.16300367" side_tool="true" visible="true" weight="0.28944504" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.64468867" weight="0.15451577" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.7234432" weight="0.36343852" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.35592186" side_tool="true" visible="true" weight="0.2992383" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.64407814" visible="true" weight="0.2992383" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.72283274" weight="0.18171926" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.6630934" visible="true" weight="0.13919415" />
-      <window_info anchor="right" x="0" y="0" width="370" height="811" id="Documentation" order="4" sideWeight="0.33690658" side_tool="true" visible="true" weight="0.13919415" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.6630435" visible="true" weight="0.13919415" />
+      <window_info anchor="right" x="0" y="0" width="370" height="811" id="Documentation" order="4" sideWeight="0.33695653" side_tool="true" visible="true" weight="0.13919415" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -414,11 +411,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PerceptronMultiCapa2.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/perceptronMultiMulti.py</url>
           <line>26</line>
@@ -589,10 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerceptronMultiCapa2.py">
+    <entry file="file://$PROJECT_DIR$/PerceptronMulticapaPlus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="-1602">
+          <caret selection-end-line="99" selection-end-column="39" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -601,18 +593,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perceptronMultiMulti.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="409">
+          <caret line="26" selection-start-line="26" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerceptronMulticapaPlus.py">
+    <entry file="file://$PROJECT_DIR$/PerceptronMultiCapa2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="419">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
